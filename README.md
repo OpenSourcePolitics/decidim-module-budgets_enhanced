@@ -1,6 +1,14 @@
 # Decidim::BudgetsEnhanced
 
-Budgets nehanced.
+Enhanced Budget component .
+
+[![CircleCI](https://circleci.com/gh/OpenSourcePolitics/decidim-module-budgets_enhanced.svg?style=svg)](https://circleci.com/gh/OpenSourcePolitics/decidim-module-budgets_enhanced)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/687f9793705a36d62366/maintainability)](https://codeclimate.com/github/OpenSourcePolitics/decidim-module-budgets_enhanced/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/687f9793705a36d62366/test_coverage)](https://codeclimate.com/github/OpenSourcePolitics/decidim-module-budgets_enhanced/test_coverage)
+
+
 
 ## Usage
 

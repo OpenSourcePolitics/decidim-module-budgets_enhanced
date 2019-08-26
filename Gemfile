@@ -7,6 +7,7 @@ ruby RUBY_VERSION
 gem "decidim", git: "https://github.com/decidim/decidim", tag: "v0.18.0"
 gem "decidim-budgets_enhanced", path: "."
 
+gem "bootsnap"
 gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
 
@@ -14,10 +15,11 @@ group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
 
   gem "decidim-dev", git: "https://github.com/decidim/decidim", tag: "v0.18.0"
+  gem "simplecov", require: false
+  gem "faker", "~> 1.9"
 end
 
 group :development do
-  gem "faker", "~> 1.9"
   gem "letter_opener_web", "~> 1.3"
   gem "listen", "~> 3.1"
   gem "spring", "~> 2.0"
