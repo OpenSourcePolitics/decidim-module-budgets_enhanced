@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Decidim
-  module BudgetsEnhanced
+  module Budgets
     class CheckoutOrderEvent < Decidim::Events::SimpleEvent
       i18n_attributes :participatory_space_title
 
