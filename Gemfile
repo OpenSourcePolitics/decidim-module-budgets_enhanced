@@ -13,10 +13,9 @@ gem "uglifier", "~> 4.1"
 
 group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
-
   gem "decidim-dev", git: "https://github.com/decidim/decidim", tag: "v0.18.0"
-  gem "simplecov", require: false
   gem "faker", "~> 1.9"
+  gem "simplecov", require: false
 end
 
 group :development do

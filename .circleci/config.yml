@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: Run rubocop
-          command: bundle exec rubocop
+          command: bundle exec rubocop -P
 
       - run:
           name: Run erblint
