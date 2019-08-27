@@ -3,5 +3,5 @@
 require "spec_helper"
 
 describe "Task loading" do
-  include_examples "decidim module task loading", "decidim_budgets"
+  include_examples "decidim module task loading", "decidim_budgets_enhanced"
 end
