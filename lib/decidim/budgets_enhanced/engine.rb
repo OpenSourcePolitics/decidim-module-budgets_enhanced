@@ -26,6 +26,7 @@ module Decidim
 
       initializer "decidim_budgets_enhanced.assets" do |app|
         app.config.assets.precompile += %w(decidim_budgets_enhanced_manifest.js decidim_budgets_enhanced_manifest.css)
+        app.config.assets.precompile += %w(decidim_budgets_manifest.js decidim_budgets_manifest.css)
       end
     end
   end
