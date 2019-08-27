@@ -7,7 +7,7 @@ fi:
   decidim:
     budgets:
       actions:
-        attachment_collections: Attachment collections
+        attachment_collections: Folders
         attachments: Attachments
         confirm_destroy: Confirm destroy
         destroy: Destroy
