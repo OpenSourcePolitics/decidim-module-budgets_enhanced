@@ -3,31 +3,31 @@ ca:
   activerecord:
     errors:
       messages:
-        equal_to: Equal to
+        equal_to: must be equal to %{count}
   decidim:
     budgets:
       actions:
         attachment_collections: Folders
         attachments: Attachments
-        confirm_destroy: Confirm destroy
-        destroy: Destroy
+        confirm_destroy: Are you sure you want to delete this project?
+        destroy: Delete
         edit: Edit
-        import: Import
-        new: New
+        import: Import proposals to projects
+        new: New project
         preview: Preview
-        title: Title
+        title: Actions
       admin:
         models:
           project:
-            name: Name
+            name: Project
         projects:
           form:
             fields:
               address: Address
           index:
-            finished_orders: Finished orders
-            pending_orders: Pending orders
-            title: Title
+            finished_orders: Finished votes
+            pending_orders: Pending votes
+            title: Projects
       models:
         project:
           fields:
@@ -35,38 +35,57 @@ ca:
             title: Title
       projects:
         budget_summary:
-          are_you_sure: Are you sure
-          assigned: Assigned
-          cancel_order: Cancel order
+          are_you_sure: Are you sure you want to cancel your vote?
+          assigned: 'Assigned:'
+          cancel_order: delete your vote and start over
           checked_out:
-            description: Description %{cancel_link}
-            title: Title
-          description_per_budget: Description per budget
-          description_per_project: Description per project
-          title: Title
+            description: You've already voted for the budget. If you've changed your
+              mind, you can %{cancel_link}.
+            title: Budget vote completed
+          description_per_budget: What projects do you think we should allocate budget
+            for? Assign at least %{minimum_budget} to the projects you want and vote
+            with your preferences to define the budget.
+          description_per_project: To which projects do you think we should allocate
+            a budget? Choose %{minimum_project} projects and validate your vote. Attention,
+            all votes are irrevocable.
+          title: You decide the budget
         index:
           view_project: View project
         limit_excess:
           close: Close
-          description_per_budget: Description per budget
-          description_per_project: Description per project
-          ok: Ok
-          title_per_budget: Title per budget
-          title_per_project: Title per project
+          description_per_budget: This project exceeds the maximum budget and can
+            not be added. If you want, you can delete a project you have already selected
+            to add, or make your vote with your preferences.
+          description_per_project: You have reached the maximum number of projects
+            allowed for this budget. If you wish, you can delete a project that you
+            have already selected.
+          ok: OK
+          title_per_budget: Maximum budget exceeded
+          title_per_project: Maximum number of projects reached
         order_progress:
           vote: Vote
         order_selected_projects:
-          choose: Choose
-          per_project: Per project
-          remaining_projects: Remaining projects
+          choose: Choisissez encore
+          per_project:
+            one: project selected out of a total of
+            other: projects selected out of a total of
+          remaining_projects:
+            one: 1 project to validate your vote.
+            other: "%{count} projects to validate your vote."
           remove: Remove
-          selected_projects: Selected projects
-          total_projects: Total projects
+          selected_projects:
+            one: project selected
+            other: projects selected
+          total_projects:
+            one: projet
+            other: projets
           view: View
-          vote: Vote
+          vote: Voter
         project:
           add: Add
-          count: Count
+          count:
+            one: 1 support
+            other: "%{count} supports"
           remove: Remove
     components:
       budgets:
@@ -74,10 +93,8 @@ ca:
           global:
             geocoding_enabled: Geocoding enabled
             total_projects: Total projects
-            vote_per_budget: Vote per budget
-            vote_per_project: Vote per project
-      budgets_enhanced:
-        name: BudgetsEnhanced
+            vote_per_budget: budget sum enabled (default)
+            vote_per_project: project number enabled
     events:
       budgets:
         order_checkout:
@@ -88,5 +105,5 @@ ca:
           notification_title: Your vote has been validated on <a href='%{resource_url}'>%{participatory_space_title}</a>
             You can always edit it if you like.
   index:
-    confirmed_orders_count: Confirmed orders count
+    confirmed_orders_count: Votes count
   total_budget: Total budget
