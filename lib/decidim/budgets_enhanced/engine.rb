@@ -15,6 +15,10 @@ module Decidim
         # root to: "budgets_enhanced#index"
       end
 
+      initializer "decidim_budgets_enhanced.extends" do
+        Dir["#{__dir__}/lib/decidim/extends/**/*.rb"].each { |f| require_dependency f }
+      end
+
       initializer "decidim_budgets_enhanced.component_settings" do
         Decidim.find_component_manifest(:budgets).settings(:global) do |settings|
           settings.attribute :vote_per_budget, type: :boolean
