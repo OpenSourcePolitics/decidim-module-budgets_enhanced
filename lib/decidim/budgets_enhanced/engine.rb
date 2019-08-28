@@ -15,16 +15,18 @@ module Decidim
         # root to: "budgets_enhanced#index"
       end
 
-      initializer "decidim_budgets_enhanced.extends" do
-        Dir["#{__dir__}/lib/decidim/extends/**/*.rb"].each { |f| require_dependency f }
-      end
-
       initializer "decidim_budgets_enhanced.component_settings" do
         Decidim.find_component_manifest(:budgets).settings(:global) do |settings|
           settings.attribute :vote_per_budget, type: :boolean
           settings.attribute :vote_per_project, type: :boolean
           settings.attribute :total_projects, type: :integer, default: 5
           settings.attribute :geocoding_enabled, type: :boolean
+        end
+      end
+
+      initializer "decidim.content_processors" do |_app|
+        Decidim.configure do |config|
+          config.content_processors += [:project]
         end
       end
 

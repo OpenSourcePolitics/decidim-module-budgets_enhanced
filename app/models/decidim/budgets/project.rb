@@ -20,6 +20,8 @@ module Decidim
       has_many :line_items, class_name: "Decidim::Budgets::LineItem", foreign_key: "decidim_project_id", dependent: :destroy
       has_many :orders, through: :line_items, foreign_key: "decidim_project_id", class_name: "Decidim::Budgets::Order"
 
+      geocoded_by :address, http_headers: ->(project) { { "Referer" => project.component.organization.host } }
+
       def self.log_presenter_class_for(_log)
         Decidim::Budgets::AdminLog::ProjectPresenter
       end
@@ -40,9 +42,17 @@ module Decidim
       end
 
       # Public: Overrides the `users_to_notify_on_comment_created` Commentable concern method.
-      # this method has been extended
       def users_to_notify_on_comment_created
-        followers
+        participatory_process = component.participatory_space
+        admins = component.organization.admins
+        users_with_role = component.organization.users_with_any_role
+        process_users_with_role = get_user_with_process_role(participatory_process.id)
+        users = admins + users_with_role + process_users_with_role
+        users.uniq
+      end
+
+      def get_user_with_process_role(participatory_process_id)
+        Decidim::ParticipatoryProcessUserRole.where(decidim_participatory_process_id: participatory_process_id).map(&:user)
       end
 
       # Public: Returns the number of times an specific project have been checked out.
