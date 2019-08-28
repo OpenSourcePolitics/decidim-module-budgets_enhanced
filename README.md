@@ -20,13 +20,30 @@ Space.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'decidim-budgets_enhanced
+gem 'decidim-budgets_enhanced'
 ```
 
 And then execute:
 
 ```bash
-bundle
+$ bundle
+$ bundle exec rake decidim_budgets_enhanced:install:migrations
+$ bundle exec rake db:migrate
+```
+
+## Uninstall
+
+Remove this line from your application's Gemfile:
+
+```ruby
+gem 'decidim-budgets_enhanced'
+```
+
+And then execute:
+
+```bash
+$ bundle
+$ bundle exec rake db:migrate SCOPE=decidim_budgets_enhanced VERSION=0
 ```
 
 ## Contributing
