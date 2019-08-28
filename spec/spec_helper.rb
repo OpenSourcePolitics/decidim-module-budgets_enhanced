@@ -8,6 +8,8 @@ Decidim::Dev.dummy_app_path = File.expand_path(File.join("spec", "decidim_dummy_
 
 require "decidim/dev/test/base_spec_helper"
 
+SimpleCov.start if ENV["SIMPLECOV"]
+
 Dir["#{__dir__}/rspec_support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
