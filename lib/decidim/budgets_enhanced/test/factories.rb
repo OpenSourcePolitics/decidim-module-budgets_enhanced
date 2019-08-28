@@ -4,9 +4,10 @@ require "decidim/faker/localized"
 require "decidim/dev"
 
 require "decidim/core/test/factories"
+require "decidim/budgets/test/factories"
 require "decidim/participatory_processes/test/factories"
 
-FactoryBot.define do
+FactoryBot.modify do
   factory :budget_component, parent: :component do
     name { Decidim::Components::Namer.new(participatory_space.organization.available_locales, :budgets).i18n_name }
     manifest_name { :budgets }
@@ -76,5 +77,13 @@ FactoryBot.define do
   factory :line_item, class: "Decidim::Budgets::LineItem" do
     order
     project { create(:project, component: order.component) }
+  end
+
+  factory :category, class: "Decidim::Category" do
+    name { generate_localized_title }
+    description { Decidim::Faker::Localized.wrapped("<p>", "</p>") { generate_localized_title } }
+    color { nil }
+
+    association :participatory_space, factory: :participatory_process
   end
 end

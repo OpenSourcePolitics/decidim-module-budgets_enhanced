@@ -192,6 +192,7 @@ PATH
   remote: .
   specs:
     decidim-budgets_enhanced (0.18.0)
+      decidim-budgets (= 0.18.0)
       decidim-core (= 0.18.0)
 
 GEM
