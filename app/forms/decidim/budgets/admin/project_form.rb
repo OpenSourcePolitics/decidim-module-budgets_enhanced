@@ -25,7 +25,9 @@ module Decidim
 
         validates :title, translatable_presence: true
         validates :description, translatable_presence: true
-        validates :budget, presence: true, numericality: { greater_than: 0 }
+
+        validates :budget, presence: true, numericality: { greater_than: 0 }, unless: :vote_per_project?
+        validates :budget, presence: true, numericality: { greater_than_or_equal_to: 0 }, if: :vote_per_project?
 
         validates :category, presence: true, if: ->(form) { form.decidim_category_id.present? }
         validates :scope, presence: true, if: ->(form) { form.decidim_scope_id.present? }
@@ -42,6 +44,10 @@ module Decidim
           return unless model.categorization
 
           self.decidim_category_id = model.categorization.decidim_category_id
+        end
+
+        def vote_per_project?
+          current_component.settings.vote_per_project
         end
 
         def proposals

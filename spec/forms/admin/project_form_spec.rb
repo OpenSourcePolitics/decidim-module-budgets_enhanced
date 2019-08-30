@@ -88,6 +88,22 @@ module Decidim::Budgets
       it { is_expected.not_to be_valid }
     end
 
+    context "when vote by project " do
+      let(:current_component) { create :budget_component, :with_vote_per_project, participatory_space: participatory_process }
+
+      describe "when budget is equal 0" do
+        let(:budget) { 0 }
+
+        it { is_expected.to be_valid }
+      end
+
+      describe "when budget is less than 0" do
+        let(:budget) { -12 }
+
+        it { is_expected.not_to be_valid }
+      end
+    end
+
     it "properly maps category id from model" do
       project = create(:project, component: current_component, category: category)
 
