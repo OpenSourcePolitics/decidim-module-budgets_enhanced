@@ -2,15 +2,15 @@ fr:
   activerecord:
     errors:
       messages:
-        equal_to: must be equal to %{count}
+        equal_to: doit être égal à %{count}
   decidim:
     budgets:
       actions:
-        attachment_collections: Folders
-        attachments: Attachments
-        confirm_destroy: Are you sure you want to delete this project?
-        destroy: Delete
-        edit: Edit
+        attachment_collections: Dossiers de pièces jointes
+        attachments: Pièces jointes
+        confirm_destroy: Êtes-vous certain de vouloir supprimer ce projet?
+        destroy: Supprimer
+        edit: Modifier
         import: Import proposals to projects
         new: New project
         preview: Preview
