@@ -8,7 +8,7 @@ Enhanced Budget component .
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/687f9793705a36d62366/test_coverage)](https://codeclimate.com/github/OpenSourcePolitics/decidim-module-budgets_enhanced/test_coverage)
 
-
+[![Crowdin](https://badges.crowdin.net/budgets-enhanced/localized.svg)](https://crowdin.com/project/budgets-enhanced)
 
 ## Usage
 
