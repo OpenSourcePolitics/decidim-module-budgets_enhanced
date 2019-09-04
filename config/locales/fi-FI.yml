@@ -40,7 +40,7 @@ fi:
           checked_out:
             description: 'Olet jo äänestänyt tätä budjettia. Jos muutit mieltäsi, voit perua äänesi: %{cancel_link}.'
             title: Äänestys suoritettu
-          description_per_budget: What projects do you think we should allocate budget for? Assign at least %{minimum_budget} to the projects you want and vote with your preferences to define the budget.
+          description_per_budget: Voit valita niin monta suunnitelmaa kuin määrärahaan mahtuu. Valitse vähintään yksi suunnitelma ja äänestä! %{minimum_budget}
           description_per_project: To which projects do you think we should allocate a budget? Choose %{minimum_project} projects and validate your vote. Attention, all votes are irrevocable.
           title: Äänestä määrärahan käyttämisestä
         index:
@@ -51,23 +51,23 @@ fi:
           description_per_project: Olet jo valinnut sallitun määrän suunnitelmia. Jos haluat äänestää tätä suunnitelmaa, poista ensin toinen suunnitelma valinnoistasi.
           ok: OK
           title_per_budget: Määräraha ylitetty
-          title_per_project: Maximum number of projects reached
+          title_per_project: Et voi äänestää useampia suunnitelmia
         order_progress:
           vote: Vahvista valintasi
         order_selected_projects:
           choose: Valitse uudelleen
           per_project:
-            one: project selected out of a total of
-            other: projects selected out of a total of
+            one: suunnitelma valittu, maksimäärä
+            other: suunnitelmaa valittu, maksimäärä
           remaining_projects:
-            one: 1 project to validate your vote.
-            other: "%{count} projects to validate your vote."
+            one: Valitse vielä yksi suunnitelma.
+            other: "Valitse vielä %{count} suunnitelmaa, niin voit äänestää."
           remove: Poista
           selected_projects:
-            one: project selected
+            one: suunnitelma valittu
             other: suunnitelmaa valittu
           total_projects:
-            one: projet
+            one: suunnitelma
             other: suunnitelmaa
           view: Näytä
           vote: Äänestäjä
@@ -93,5 +93,5 @@ fi:
           email_subject: Äänesi on vahvistettu alueella %{participatory_space_title}
           notification_title: Olet äänestänyt onnistuneesti alueella <a href='%{resource_url}'>%{participatory_space_title}</a>. Voit seurata äänestyksen etenemistä ja voittaneiden suunnitelmien toteutumista verkkopalvelussa.
   index:
-    confirmed_orders_count: Votes count
-  total_budget: Total budget
+    confirmed_orders_count: Äänimäärä
+  total_budget: Määräraha
