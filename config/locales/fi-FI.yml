@@ -42,18 +42,18 @@ fi:
             title: Äänestys suoritettu
           description_per_budget: What projects do you think we should allocate budget for? Assign at least %{minimum_budget} to the projects you want and vote with your preferences to define the budget.
           description_per_project: To which projects do you think we should allocate a budget? Choose %{minimum_project} projects and validate your vote. Attention, all votes are irrevocable.
-          title: You decide the budget
+          title: Äänestä määrärahojen käytöstä
         index:
-          view_project: View project
+          view_project: Näytä suunnitelma
         limit_excess:
-          close: Close
-          description_per_budget: This project exceeds the maximum budget and can not be added. If you want, you can delete a project you have already selected to add, or make your vote with your preferences.
-          description_per_project: You have reached the maximum number of projects allowed for this budget. If you wish, you can delete a project that you have already selected.
+          close: Sulje
+          description_per_budget: Tämän suunnitelman lisääminen ylittäisi määrärahan. Jos haluat lisätä sen, poista ensin toinen suunnitelma budjetistasi.
+          description_per_project: Olet jo valinnut sallitun määrän suunnitelmia. Jos haluat äänestää tätä suunnitelmaa, poista ensin toinen suunnitelma valinnoistasi.
           ok: OK
-          title_per_budget: Maximum budget exceeded
+          title_per_budget: Määräraha ylitetty
           title_per_project: Maximum number of projects reached
         order_progress:
-          vote: Vote
+          vote: Vahvista valintasi
         order_selected_projects:
           choose: Valitse uudelleen
           per_project:
@@ -62,27 +62,27 @@ fi:
           remaining_projects:
             one: 1 project to validate your vote.
             other: "%{count} projects to validate your vote."
-          remove: Remove
+          remove: Poista
           selected_projects:
             one: project selected
-            other: projects selected
+            other: suunnitelmaa valittu
           total_projects:
             one: projet
-            other: projets
-          view: View
-          vote: Voter
+            other: suunnitelmaa
+          view: Näytä
+          vote: Äänestäjä
         project:
-          add: Add
+          add: Lisää
           count:
             one: 1 support
-            other: "%{count} supports"
-          remove: Remove
+            other: "%{count} ääntä"
+          remove: Poista
     components:
       budgets:
         settings:
           global:
-            geocoding_enabled: Geocoding enabled
-            total_projects: Total projects
+            geocoding_enabled: Sijaintitieto käytössä
+            total_projects: Suunnitelmia yhteensä
             vote_per_budget: budget sum enabled (default)
             vote_per_project: project number enabled
     events:
