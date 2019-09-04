@@ -2,18 +2,18 @@ fi:
   activerecord:
     errors:
       messages:
-        equal_to: must be equal to %{count}
+        equal_to: täytyy olla yhtä suuri kuin %{count}
   decidim:
     budgets:
       actions:
-        attachment_collections: Folders
-        attachments: Attachments
-        confirm_destroy: Are you sure you want to delete this project?
-        destroy: Delete
-        edit: Edit
-        import: Import proposals to projects
-        new: New project
-        preview: Preview
+        attachment_collections: Kansiot
+        attachments: Liitetiedostot
+        confirm_destroy: Haluatko varmasti poistaa tämän suunnitelman?
+        destroy: Poista
+        edit: Muokkaa
+        import: Vie suunnitelmat äänestykseen
+        new: Uusi suunnitelma
+        preview: Esikatsele
         title: Actions
       admin:
         models:
