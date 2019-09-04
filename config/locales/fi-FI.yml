@@ -42,7 +42,7 @@ fi:
             title: Äänestys suoritettu
           description_per_budget: What projects do you think we should allocate budget for? Assign at least %{minimum_budget} to the projects you want and vote with your preferences to define the budget.
           description_per_project: To which projects do you think we should allocate a budget? Choose %{minimum_project} projects and validate your vote. Attention, all votes are irrevocable.
-          title: Äänestä määrärahojen käytöstä
+          title: Äänestä määrärahan käyttämisestä
         index:
           view_project: Näytä suunnitelma
         limit_excess:
@@ -74,7 +74,7 @@ fi:
         project:
           add: Lisää
           count:
-            one: 1 support
+            one: 1 ääni
             other: "%{count} ääntä"
           remove: Poista
     components:
@@ -83,15 +83,15 @@ fi:
           global:
             geocoding_enabled: Sijaintitieto käytössä
             total_projects: Suunnitelmia yhteensä
-            vote_per_budget: budget sum enabled (default)
-            vote_per_project: project number enabled
+            vote_per_budget: sallittu määräraha (oletus)
+            vote_per_project: äänimäärä per henkilö
     events:
       budgets:
         order_checkout:
-          email_intro: 'Your vote has been validated. You can always edit it if you like by clicking here: <a href=''%{resource_url}''>%{participatory_space_title}'
-          email_outro: Thank you for your participation
-          email_subject: Your vote has been validated on %{participatory_space_title}
-          notification_title: Your vote has been validated on <a href='%{resource_url}'>%{participatory_space_title}</a> You can always edit it if you like.
+          email_intro: 'Äänesi on tallennettu. Voit halutessasi muuttaa sitä äänestyksen loppumiseen saakka: <a href=''%{resource_url}''>%{participatory_space_title}'
+          email_outro: Kiitos osallistumisestasi budjetointiin!
+          email_subject: Äänesi on vahvistettu alueella %{participatory_space_title}
+          notification_title: Olet äänestänyt onnistuneesti alueella <a href='%{resource_url}'>%{participatory_space_title}</a>. Voit seurata äänestyksen etenemistä ja voittaneiden suunnitelmien toteutumista verkkopalvelussa.
   index:
     confirmed_orders_count: Votes count
   total_budget: Total budget
