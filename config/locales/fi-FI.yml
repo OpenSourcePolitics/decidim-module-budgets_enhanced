@@ -14,32 +14,32 @@ fi:
         import: Vie suunnitelmat äänestykseen
         new: Uusi suunnitelma
         preview: Esikatsele
-        title: Actions
+        title: Toiminnot
       admin:
         models:
           project:
-            name: Project
+            name: Suunnitelma
         projects:
           form:
             fields:
-              address: Address
+              address: Osoite
           index:
-            finished_orders: Finished votes
-            pending_orders: Pending votes
-            title: Projects
+            finished_orders: Vahvistetut äänet
+            pending_orders: Vahvistamattomat äänet
+            title: Suunnitelmat
       models:
         project:
           fields:
-            map: Map
-            title: Title
+            map: Kartta
+            title: Otsikko
       projects:
         budget_summary:
-          are_you_sure: Are you sure you want to cancel your vote?
-          assigned: 'Assigned:'
-          cancel_order: delete your vote and start over
+          are_you_sure: Haluatko varmasti peruuttaa äänesi?
+          assigned: 'Varattu:'
+          cancel_order: peruuta ja aloita alusta
           checked_out:
-            description: You've already voted for the budget. If you've changed your mind, you can %{cancel_link}.
-            title: Budget vote completed
+            description: 'Olet jo äänestänyt tätä budjettia. Jos muutit mieltäsi, voit perua äänesi: %{cancel_link}.'
+            title: Äänestys suoritettu
           description_per_budget: What projects do you think we should allocate budget for? Assign at least %{minimum_budget} to the projects you want and vote with your preferences to define the budget.
           description_per_project: To which projects do you think we should allocate a budget? Choose %{minimum_project} projects and validate your vote. Attention, all votes are irrevocable.
           title: You decide the budget
@@ -55,7 +55,7 @@ fi:
         order_progress:
           vote: Vote
         order_selected_projects:
-          choose: Choisissez encore
+          choose: Valitse uudelleen
           per_project:
             one: project selected out of a total of
             other: projects selected out of a total of
