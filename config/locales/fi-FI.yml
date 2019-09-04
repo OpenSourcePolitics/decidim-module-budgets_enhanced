@@ -41,7 +41,7 @@ fi:
             description: 'Olet jo äänestänyt tätä budjettia. Jos muutit mieltäsi, voit perua äänesi: %{cancel_link}.'
             title: Äänestys suoritettu
           description_per_budget: Voit valita niin monta suunnitelmaa kuin määrärahaan mahtuu. Valitse vähintään yksi suunnitelma ja äänestä! %{minimum_budget}
-          description_per_project: Mille suunnitelmalle haluat antaa äänesi? %{minimum_project}.
+          description_per_project: Mille suunnitelmalle haluat antaa äänesi? %{minimum_project}
           title: Äänestä määrärahan käyttämisestä
         index:
           view_project: Näytä suunnitelma
