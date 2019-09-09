@@ -47,7 +47,7 @@
           <strong><%= current_order.projects.size %> </strong><%= t(".selected_projects", count: current_order.projects.size) %>
           <%= icon("caret-bottom", class: "icon--small", aria_label: t(".view"), role: "img") %>
         </button>
-        <div id="reveal-selected" class="hide" data-toggler=".hide">
+        <div id="reveal-selected" class="" data-toggler=".hide">
           <ul class="budget-summary__selected-list">
             <% current_order.projects.each do |project| %>
               <li class="budget-summary__selected-item">
