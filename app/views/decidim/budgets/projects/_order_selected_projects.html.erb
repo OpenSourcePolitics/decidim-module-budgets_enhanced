@@ -48,10 +48,12 @@
   <div id="order-selected-projects">
     <% if current_order&.projects&.any? %>
       <div class="card__content budget-summary__selected">
-        <button data-toggle="reveal-selected">
-          <strong><%= current_order.projects.size %> </strong><%= t(".selected_projects", count: current_order.projects.size) %>
-          <%= icon("caret-bottom", class: "icon--small", aria_label: t(".view"), role: "img") %>
-        </button>
+        <% unless current_order_checked_out? %>
+          <button data-toggle="reveal-selected">
+            <strong><%= current_order.projects.size %> </strong><%= t(".selected_projects", count: current_order.projects.size) %>
+            <%= icon("caret-bottom", class: "icon--small", aria_label: t(".view"), role: "img") %>
+          </button>
+        <% end %>
         <div id="reveal-selected" class="" data-toggler=".hide">
           <ul class="budget-summary__selected-list">
             <% current_order.projects.each do |project| %>
