@@ -3,39 +3,44 @@
     <% if current_order&.projects&.any? %>
       <div class="card__content budget-summary__selected">
         <% unless current_order_checked_out? %>
-          <strong><%= current_order.projects.size %> </strong><%= t(".per_project", count: current_order.projects.size, total_count: component_settings.total_projects) %>
-          <strong id="order-total-projects">
-            <%= component_settings.total_projects %>
-            <%= t(".total_projects", count: component_settings.total_projects) %>
-          </strong>
+          <button data-toggle="reveal-selected">
+            <strong><%= current_order.projects.size %> </strong><%= t(".per_project", count: current_order.projects.size, total_count: component_settings.total_projects) %>
+            <strong id="order-total-projects">
+              <%= component_settings.total_projects %>
+              <%= t(".total_projects", count: component_settings.total_projects) %>
+            </strong>
+            <%= icon("caret-bottom", class: "icon--small", aria_label: t(".view"), role: "img") %>
+          </button>
         <% end %>
-        <ul class="budget-summary__selected-list">
-          <% current_order.projects.each do |project| %>
-            <li class="budget-summary__selected-item">
-              <%= link_to translated_attribute(project.title), project %>
-              <strong class="budget-summary__selected-number">
-                <%= budget_to_currency project.budget %>
-              </strong>
-              <% unless current_order_checked_out? %>
-                <%= button_to order_line_item_path(project_id: project), method: :delete, remote: true, data: { disable: true }, form: { style: "display: inline" } do %>
-                  <%= icon("trash", aria_label: t(".remove"), role: "img") %>
+        <div id="reveal-selected" class="" data-toggler=".hide">
+          <ul class="budget-summary__selected-list">
+            <% current_order.projects.each do |project| %>
+              <li class="budget-summary__selected-item">
+                <%= link_to translated_attribute(project.title), project %>
+                <strong class="budget-summary__selected-number">
+                  <%= budget_to_currency project.budget %>
+                </strong>
+                <% unless current_order_checked_out? %>
+                  <%= button_to order_line_item_path(project_id: project), method: :delete, remote: true, data: { disable: true }, form: { style: "display: inline" } do %>
+                    <%= icon("trash", aria_label: t(".remove"), role: "img") %>
+                  <% end %>
                 <% end %>
-              <% end %>
-            </li>
+              </li>
+            <% end %>
+          </ul>
+          <% unless current_order.can_checkout? %>
+            <p><%= t(".choose") %>
+              <%= t(".remaining_projects", count: current_order.remaining_projects) %>
+            </p>
           <% end %>
-        </ul>
-        <% unless current_order.can_checkout? %>
-          <p><%= t(".choose") %>
-            <%= t(".remaining_projects", count: current_order.remaining_projects) %>
-          </p>
-        <% end %>
-        <% unless current_order_checked_out? %>
-          <% if current_order_can_be_checked_out? %>
-            <button class="button small button--sc" data-toggle="budget-confirm"><%= t(".vote") %></button>
-          <% else %>
-            <button class="button small button--sc" data-toggle="budget-confirm" disabled><%= t(".vote") %></button>
+          <% unless current_order_checked_out? %>
+            <% if current_order_can_be_checked_out? %>
+              <button class="button small button--sc" data-toggle="budget-confirm"><%= t(".vote") %></button>
+            <% else %>
+              <button class="button small button--sc" data-toggle="budget-confirm" disabled><%= t(".vote") %></button>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     <% end %>
   </div>
