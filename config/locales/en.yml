@@ -46,8 +46,7 @@ en:
             for? Assign at least %{minimum_budget} to the projects you want and vote
             with your preferences to define the budget.
           description_per_project: To which projects do you think we should allocate
-            a budget? Choose %{minimum_project} projects and validate your vote. Attention,
-            all votes are irrevocable.
+            a budget? Choose %{minimum_project} projects and validate your vote.
           title: You decide the budget
         index:
           view_project: View project
@@ -65,7 +64,7 @@ en:
         order_progress:
           vote: Vote
         order_selected_projects:
-          choose: Choisissez encore
+          choose: Choose
           per_project:
             one: project selected out of a total of
             other: projects selected out of a total of
@@ -93,8 +92,8 @@ en:
           global:
             geocoding_enabled: Geocoding enabled
             total_projects: Total projects
-            vote_per_budget: budget sum enabled (default)
-            vote_per_project: project number enabled
+            vote_per_budget: maximum budjet sum enabled (default)
+            vote_per_project: maximum project count enabled
     events:
       budgets:
         order_checkout:
