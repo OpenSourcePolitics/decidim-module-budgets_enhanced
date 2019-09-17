@@ -38,9 +38,9 @@ fi:
           assigned: 'Varattu:'
           cancel_order: peruuta ja aloita alusta
           checked_out:
-            description: 'Olet jo äänestänyt tätä budjettia. Jos muutit mieltäsi, voit perua äänesi: %{cancel_link}.'
+            description: 'Olet jo äänestänyt tällä alueella. Jos muutit mieltäsi, voit perua äänesi: %{cancel_link}.'
             title: Äänestys suoritettu
-          description_per_budget: Voit valita niin monta suunnitelmaa kuin määrärahaan mahtuu. Valitse vähintään yksi suunnitelma ja äänestä! %{minimum_budget}
+          description_per_budget: Voit valita niin monta suunnitelmaa kuin määrärahaan mahtuu. Sinun pitää käyttää vähintään %{minimum_budget} määrärahasta.
           description_per_project: Mille suunnitelmalle haluat antaa äänesi? %{minimum_project}
           title: Äänestä määrärahan käyttämisestä
         index:
@@ -51,7 +51,7 @@ fi:
           description_per_project: Olet jo valinnut sallitun määrän suunnitelmia. Jos haluat äänestää tätä suunnitelmaa, poista ensin toinen suunnitelma valinnoistasi.
           ok: OK
           title_per_budget: Määräraha ylitetty
-          title_per_project: Et voi äänestää useampia suunnitelmia
+          title_per_project: Olet jo käyttänyt kaikki äänesi
         order_progress:
           vote: Vahvista valintasi
         order_selected_projects:
