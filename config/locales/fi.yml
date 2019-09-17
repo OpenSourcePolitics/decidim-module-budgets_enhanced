@@ -48,7 +48,7 @@ fi:
         limit_excess:
           close: Sulje
           description_per_budget: Tämän suunnitelman lisääminen ylittäisi määrärahan. Jos haluat lisätä sen, poista ensin toinen suunnitelma.
-          description_per_project: Olet jo valinnut sallitun määrän suunnitelmia. Jos haluat äänestää tätä suunnitelmaa, poista ensin toinen suunnitelma valinnoistasi.
+          description_per_project: Olet jo valinnut sallitun määrän suunnitelmia. Jos haluat äänestää tätä suunnitelmaa, poista ensin toinen suunnitelma.
           ok: OK
           title_per_budget: Määräraha ylitetty
           title_per_project: Olet jo käyttänyt kaikki äänesi
