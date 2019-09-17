@@ -40,14 +40,14 @@ fi:
           checked_out:
             description: 'Olet jo äänestänyt tällä alueella. Jos muutit mieltäsi, voit perua äänesi: %{cancel_link}.'
             title: Äänestys suoritettu
-          description_per_budget: Voit valita niin monta suunnitelmaa kuin määrärahaan mahtuu. Sinun pitää käyttää vähintään %{minimum_budget} määrärahasta.
+          description_per_budget: Voit valita niin monta suunnitelmaa kuin määrärahaan mahtuu. Sinun pitää käyttää vähintään %{minimum_budget} määrärahasta. Muista vahvistaa äänesi valintojen jälkeen.
           description_per_project: Mille suunnitelmille haluat antaa äänesi? Valitse %{minimum_project} kappaletta suunnitelmia ja vahvista äänesi.
           title: Äänestä määrärahan käyttämisestä
         index:
           view_project: Näytä suunnitelma
         limit_excess:
           close: Sulje
-          description_per_budget: Tämän suunnitelman lisääminen ylittäisi määrärahan. Jos haluat lisätä sen, poista ensin toinen suunnitelma budjetistasi.
+          description_per_budget: Tämän suunnitelman lisääminen ylittäisi määrärahan. Jos haluat lisätä sen, poista ensin toinen suunnitelma.
           description_per_project: Olet jo valinnut sallitun määrän suunnitelmia. Jos haluat äänestää tätä suunnitelmaa, poista ensin toinen suunnitelma valinnoistasi.
           ok: OK
           title_per_budget: Määräraha ylitetty
@@ -82,9 +82,9 @@ fi:
         settings:
           global:
             geocoding_enabled: Sijaintitieto käytössä
-            total_projects: Suunnitelmia yhteensä
-            vote_per_budget: sallittu määräraha (oletus)
-            vote_per_project: äänimäärä per henkilö
+            total_projects: Äänimäärä per henkilö
+            vote_per_budget: määrärahan käyttöön perustuva äänestystapa (oletus)
+            vote_per_project: kiinteään äänimäärään perustuva äänestystapa
     events:
       budgets:
         order_checkout:
