@@ -41,7 +41,7 @@ fi:
             description: 'Olet jo äänestänyt tällä alueella. Jos muutit mieltäsi, voit perua äänesi: %{cancel_link}.'
             title: Äänestys suoritettu
           description_per_budget: Voit valita niin monta suunnitelmaa kuin määrärahaan mahtuu. Sinun pitää käyttää vähintään %{minimum_budget} määrärahasta.
-          description_per_project: Mille suunnitelmalle haluat antaa äänesi? %{minimum_project}
+          description_per_project: Mille suunnitelmille haluat antaa äänesi? Valitse %{minimum_project} kappaletta suunnitelmia ja vahvista äänesi.
           title: Äänestä määrärahan käyttämisestä
         index:
           view_project: Näytä suunnitelma
@@ -55,13 +55,13 @@ fi:
         order_progress:
           vote: Vahvista valintasi
         order_selected_projects:
-          choose: Valitse uudelleen
+          choose: Valitse
           per_project:
             one: suunnitelma valittu, maksimäärä
             other: suunnitelmaa valittu, maksimäärä
           remaining_projects:
-            one: Valitse vielä yksi suunnitelma.
-            other: "Valitse vielä %{count} suunnitelmaa, niin voit äänestää."
+            one: vielä 1 suunnitelma ja vahvista äänesi.
+            other: "vielä %{count} suunnitelmaa ja vahvista äänesi."
           remove: Poista
           selected_projects:
             one: suunnitelma valittu
