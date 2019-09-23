@@ -12,34 +12,34 @@ sv:
         destroy: Ta bort
         edit: Redigera
         import: Importera förslag till projekt
-        new: New project
-        preview: Preview
-        title: Actions
+        new: Nytt projekt
+        preview: Förhandsvisning
+        title: Åtgärder
       admin:
         models:
           project:
-            name: Project
+            name: Projekt
         projects:
           form:
             fields:
-              address: Address
+              address: Adress
           index:
-            finished_orders: Finished votes
-            pending_orders: Pending votes
-            title: Projects
+            finished_orders: Färdiga röster
+            pending_orders: Utestående röster
+            title: Projekt
       models:
         project:
           fields:
-            map: Map
-            title: Title
+            map: Karta
+            title: Titel
       projects:
         budget_summary:
-          are_you_sure: Are you sure you want to cancel your vote?
-          assigned: 'Assigned:'
-          cancel_order: delete your vote and start over
+          are_you_sure: Är du säker på att du vill dra tillbaka din röst?
+          assigned: 'Tilldelad:'
+          cancel_order: dra tillbaka din röst och börja om
           checked_out:
-            description: You've already voted for the budget. If you've changed your mind, you can %{cancel_link}.
-            title: Budget vote completed
+            description: Du har redan röstat för budgeten. Om du har ändrat din åsikt kan du %{cancel_link}.
+            title: Budgetomröstningen är fullbordad
           description_per_budget: What projects do you think we should allocate budget for? Assign at least %{minimum_budget} to the projects you want and vote with your preferences to define the budget.
           description_per_project: To which projects do you think we should allocate a budget? Choose %{minimum_project} projects and validate your vote.
           title: You decide the budget
