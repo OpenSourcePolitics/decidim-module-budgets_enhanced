@@ -2,16 +2,16 @@ sv:
   activerecord:
     errors:
       messages:
-        equal_to: must be equal to %{count}
+        equal_to: måste vara lika med %{count}
   decidim:
     budgets:
       actions:
-        attachment_collections: Folders
-        attachments: Attachments
-        confirm_destroy: Are you sure you want to delete this project?
-        destroy: Delete
-        edit: Edit
-        import: Import proposals to projects
+        attachment_collections: Mappar
+        attachments: Bilagor
+        confirm_destroy: Är du säker på att du vill ta bort detta projekt?
+        destroy: Ta bort
+        edit: Redigera
+        import: Importera förslag till projekt
         new: New project
         preview: Preview
         title: Actions
