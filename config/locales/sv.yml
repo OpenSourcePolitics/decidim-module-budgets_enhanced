@@ -74,7 +74,7 @@ sv:
         project:
           add: Lägg till
           count:
-            one: En röst
+            one: 1 röst
             other: "%{count} röster"
           remove: Ta bort
     components:
@@ -88,7 +88,7 @@ sv:
     events:
       budgets:
         order_checkout:
-          email_intro: 'Din röst har validerats. Du kan alltid redigera den om du vill genom att klicka här: <a href=''%{resource_url}''>%{participatory_space_title}'
+          email_intro: 'Din röst har bekräftats. Du kan alltid redigera den om du vill genom att klicka här: <a href=''%{resource_url}''>%{participatory_space_title}'
           email_outro: Tack för ditt deltagande
           email_subject: Din röst har bekräftats på %{participatory_space_title}
           notification_title: Din röst har bekräftats på <a href='%{resource_url}'>%{participatory_space_title}</a> Du kan alltid redigera den om du vill.
