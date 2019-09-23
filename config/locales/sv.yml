@@ -40,15 +40,15 @@ sv:
           checked_out:
             description: Du har redan röstat för budgeten. Om du har ändrat din åsikt kan du %{cancel_link}.
             title: Budgetomröstningen är fullbordad
-          description_per_budget: What projects do you think we should allocate budget for? Assign at least %{minimum_budget} to the projects you want and vote with your preferences to define the budget.
-          description_per_project: To which projects do you think we should allocate a budget? Choose %{minimum_project} projects and validate your vote.
-          title: You decide the budget
+          description_per_budget: Vilka projekt tycker du vi borde allokera en budget för? Tilldela åtminstone %{minimum_budget} till projekten som du vill ha rösta med dina preferenser för att definiera budgeten.
+          description_per_project: För vilka projekt tycker du att vi borde allokera en budget? Välj %{minimum_project} projekt och validera din röst.
+          title: Du bestämmer budgeten
         index:
-          view_project: View project
+          view_project: Visa projekt
         limit_excess:
-          close: Close
-          description_per_budget: This project exceeds the maximum budget and can not be added. If you want, you can delete a project you have already selected to add, or make your vote with your preferences.
-          description_per_project: You have reached the maximum number of projects allowed for this budget. If you wish, you can delete a project that you have already selected.
+          close: Stäng
+          description_per_budget: Det här projektet överskrider den maximala budgeten och kan inte läggas till. Om du vill kan du ta bort ett projekt som du redan har lagt till, eller rösta med dina preferenser.
+          description_per_project: Du har uppnått det maximala antalet projekt som tillåts för den här budgeten. Om du vill kan du ta bort ett projekt som du redan har valt.
           ok: OK
           title_per_budget: Maximum budget exceeded
           title_per_project: Maximum number of projects reached
