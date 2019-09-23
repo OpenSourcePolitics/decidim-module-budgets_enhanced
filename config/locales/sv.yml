@@ -44,54 +44,54 @@ sv:
           description_per_project: För vilka projekt tycker du att vi borde allokera en budget? Välj %{minimum_project} projekt och validera din röst.
           title: Du bestämmer budgeten
         index:
-          view_project: Visa projekt
+          view_project: Visa projektet
         limit_excess:
           close: Stäng
-          description_per_budget: Det här projektet överskrider den maximala budgeten och kan inte läggas till. Om du vill kan du ta bort ett projekt som du redan har lagt till, eller rösta med dina preferenser.
+          description_per_budget: Det här projektet överskrider den maximala budgeten och kan inte läggas till. Om du vill kan du ta bort ett projekt som du redan har lagt till, eller rösta med dina önskemål.
           description_per_project: Du har uppnått det maximala antalet projekt som tillåts för den här budgeten. Om du vill kan du ta bort ett projekt som du redan har valt.
           ok: OK
-          title_per_budget: Maximum budget exceeded
-          title_per_project: Maximum number of projects reached
+          title_per_budget: Den maximala budgeten överskreds
+          title_per_project: Det maximala antalet projekt nåddes
         order_progress:
-          vote: Vote
+          vote: Rösta
         order_selected_projects:
-          choose: Choose
+          choose: Välj
           per_project:
-            one: project selected out of a total of
-            other: projects selected out of a total of
+            one: projekt valt av totalt
+            other: projekt valda av totalt
           remaining_projects:
-            one: 1 project to validate your vote.
-            other: "%{count} projects to validate your vote."
-          remove: Remove
+            one: 1 projekt för att bekräfta din röst.
+            other: "%{count} projekt för att bekräfta din röst."
+          remove: Ta bort
           selected_projects:
-            one: project selected
-            other: projects selected
+            one: valt projekt
+            other: valda projekt
           total_projects:
-            one: projet
-            other: projets
-          view: View
-          vote: Voter
+            one: projekt
+            other: projekt
+          view: Visa
+          vote: Väjare
         project:
-          add: Add
+          add: Lägg till
           count:
-            one: 1 support
-            other: "%{count} supports"
-          remove: Remove
+            one: En röst
+            other: "%{count} röster"
+          remove: Ta bort
     components:
       budgets:
         settings:
           global:
-            geocoding_enabled: Geocoding enabled
-            total_projects: Total projects
-            vote_per_budget: maximum budjet sum enabled (default)
-            vote_per_project: maximum project count enabled
+            geocoding_enabled: Geokodning aktiverad
+            total_projects: Projekt totalt
+            vote_per_budget: maximal budgetsumma aktiverad (standardinställning)
+            vote_per_project: maximalt antal projekt aktiverat
     events:
       budgets:
         order_checkout:
-          email_intro: 'Your vote has been validated. You can always edit it if you like by clicking here: <a href=''%{resource_url}''>%{participatory_space_title}'
-          email_outro: Thank you for your participation
-          email_subject: Your vote has been validated on %{participatory_space_title}
-          notification_title: Your vote has been validated on <a href='%{resource_url}'>%{participatory_space_title}</a> You can always edit it if you like.
+          email_intro: 'Din röst har validerats. Du kan alltid redigera den om du vill genom att klicka här: <a href=''%{resource_url}''>%{participatory_space_title}'
+          email_outro: Tack för ditt deltagande
+          email_subject: Din röst har bekräftats på %{participatory_space_title}
+          notification_title: Din röst har bekräftats på <a href='%{resource_url}'>%{participatory_space_title}</a> Du kan alltid redigera den om du vill.
   index:
-    confirmed_orders_count: Votes count
+    confirmed_orders_count: Antal röster
   total_budget: Total budget
