@@ -41,7 +41,7 @@ fr:
             description: Vous avez déjà voté. Si vous avez changé d'avis, vous pouvez %{cancel_link}.
             title: Vote du budget terminé
           description_per_budget: Sélectionnez les projets que vous souhaitez voir être réalisés puis confirmez votre choix. Les projets choisis doivent atteindre le montant minimum cumulé de %{minimum_budget}.
-          description_per_project: Sélectionnez les projets que vous souhaitez voir être réalisés puis confirmez votre choix. Vous devez choisir %{minimum_project} minimum.
+          description_per_project: To which projects do you think we should allocate a budget? Choose %{minimum_project} projects and validate your vote.
           title: Vous décidez du budget
         index:
           view_project: Voir le projet
@@ -55,7 +55,7 @@ fr:
         order_progress:
           vote: Confirmer votre choix
         order_selected_projects:
-          choose: Choisissez encore
+          choose: Choose
           per_project:
             one: projet sélectionné sur un total de
             other: projets sélectionnés sur un total de
@@ -83,8 +83,8 @@ fr:
           global:
             geocoding_enabled: Activer la "Géolocalisation"
             total_projects: Budget par nombre de projets total
-            vote_per_budget: activer le "Vote selon un budget" (par défaut)
-            vote_per_project: activer le "Vote par nombre de projets"
+            vote_per_budget: maximum budjet sum enabled (default)
+            vote_per_project: maximum project count enabled
     events:
       budgets:
         order_checkout:
