@@ -57,8 +57,8 @@ fi:
         order_selected_projects:
           choose: Valitse
           per_project:
-            one: suunnitelma valittu, maksimäärä
-            other: suunnitelmaa valittu, maksimäärä
+            one: suunnitelma valittu, valittava yhteensä
+            other: suunnitelmaa valittu, valittava yhteensä
           remaining_projects:
             one: vielä 1 suunnitelma ja vahvista äänesi.
             other: "vielä %{count} suunnitelmaa ja vahvista äänesi."
