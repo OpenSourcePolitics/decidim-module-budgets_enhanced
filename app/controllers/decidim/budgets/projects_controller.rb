@@ -6,19 +6,18 @@ module Decidim
     class ProjectsController < Decidim::Budgets::ApplicationController
       include FilterResource
       include NeedsCurrentOrder
+      include Orderable
 
-      helper_method :projects, :random_seed, :project, :geocoded_projects
+      helper_method :projects, :project, :geocoded_projects
+
+      private
 
       def projects
-        @projects ||= search.results.page(params[:page]).per(current_component.settings.projects_per_page)
-      end
-
-      def random_seed
-        @random_seed ||= search.random_seed
+        @projects ||= search.results.order_randomly(random_seed).page(params[:page]).per(current_component.settings.projects_per_page)
       end
 
       def project
-        @project ||= projects.find(params[:id])
+        @project ||= search.results.find(params[:id])
       end
 
       def search_klass
@@ -29,16 +28,13 @@ module Decidim
         {
           search_text: "",
           scope_id: "",
-          category_id: "",
-          random_seed: params[:random_seed]
+          category_id: ""
         }
       end
 
       def context_params
         { component: current_component, organization: current_organization }
       end
-
-      private
 
       def geocoded_projects
         @geocoded_projects ||= search.results.select(&:geocoded?)
