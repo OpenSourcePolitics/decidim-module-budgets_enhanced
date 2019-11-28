@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", git: "https://github.com/decidim/decidim", tag: "v0.18.0"
+gem "decidim", git: "https://github.com/decidim/decidim", tag: "v0.19.0"
 gem "decidim-budgets_enhanced", path: "."
 
 gem "bootsnap"
@@ -12,8 +12,8 @@ gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
-  gem "decidim-dev", git: "https://github.com/decidim/decidim", tag: "v0.18.0"
+  gem "byebug", "~> 11.0", platform: :mri
+  gem "decidim-dev", git: "https://github.com/decidim/decidim", tag: "v0.19.0"
   gem "faker", "~> 1.9"
   gem "simplecov", require: false
 end
