@@ -5,7 +5,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: decidim/decidim@sha256:348fb1faa49cfe76ba7cbeafc67ca09002cf95f0ffa7a76eefa9d5b3774e0ee9
+      - image: decidim/decidim@sha256:dcf729c93abf361ecedc0eadf4fc208a2a990dd5fe85e708437a6fba9456682a
         environment:
           DATABASE_USERNAME: postgres
 
