@@ -8,6 +8,7 @@ jobs:
       - image: decidim/decidim@sha256:dcf729c93abf361ecedc0eadf4fc208a2a990dd5fe85e708437a6fba9456682a
         environment:
           DATABASE_USERNAME: postgres
+          BUNDLER_VERSION: 2.0.2
 
       - image: postgres
         environment:
@@ -18,16 +19,23 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Install bundler
+          command: |
+            gem update --system
+            gem uninstall bundler
+            gem install bundler --version $BUNDLER_VERSION
+
       - restore_cache:
           keys:
-            - bundler-dependencies-{{ checksum "Gemfile.lock" }}
+            - bundler-dependencies-2.6.5-{{ checksum "Gemfile.lock" }}
 
       - run:
           name: Install dependencies
           command: bundle install
 
       - save_cache:
-          key: bundler-dependencies-{{ checksum "Gemfile.lock" }}
+          key: bundler-dependencies-2.6.5-{{ checksum "Gemfile.lock" }}
           paths:
             - /usr/local/bundle
 
