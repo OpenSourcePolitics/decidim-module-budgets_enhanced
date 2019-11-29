@@ -20,14 +20,29 @@ $(() => {
     const perProject = $budgetSummaryTotal.attr("data-per-project") === "true";
     const $currentTarget = $(event.currentTarget);
     const projectBudget = parseInt($currentTarget.attr("data-budget"), 10);
-    if ($currentTarget.attr("data-add") && (currentProjects === totalProjects) && perProject) {
-      $budgetExceedModal.foundation("toggle");
+
+    if ($currentTarget.attr("disabled")) {
       cancelEvent(event);
-    } else if ($currentTarget.attr("disabled")) {
-      cancelEvent(event);
-    } else if ($currentTarget.attr("data-add") && ((currentBudget + projectBudget) > totalBudget) && !perProject) {
-      $budgetExceedModal.foundation("toggle");
-      cancelEvent(event);
+    } else if ($currentTarget.attr("data-add")) {
+      if (perProject) {
+        if (currentProjects === totalProjects) {
+          $budgetExceedModal.foundation("toggle");
+          cancelEvent(event);
+        } else if ((currentProjects + 1) === totalProjects) {
+          $(".budget--list__action[data-add]").attr("disabled", "disabled");
+          $currentTarget.removeAttr("disabled");
+        }
+      } else {
+        if ((currentBudget + projectBudget) > totalBudget) {
+          $budgetExceedModal.foundation("toggle");
+          cancelEvent(event);
+        } else if ((currentBudget + projectBudget) === totalBudget) {
+          $(".budget--list__action[data-add]").attr("disabled", "disabled");
+          $currentTarget.removeAttr("disabled");
+        }
+      }
+    } else {
+      $(".budget--list__action[data-add]").removeAttr("disabled");
     }
   });
 });
