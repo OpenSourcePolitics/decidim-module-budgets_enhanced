@@ -280,12 +280,7 @@ shared_examples "orders" do |*options|
               end
 
               within "#project-#{other_project.id}-item" do
-                page.find(".budget--list__action").click
-                wait_for_ajax
-              end
-
-              within "#limit-excess" do
-                expect(page).to have_content("Maximum number of projects reached")
+                expect(page).to have_selector("button.budget--list__action[disabled]", count: 1)
               end
             end
           end
