@@ -70,7 +70,7 @@ sv:
             one: projekt
             other: projekt
           view: Visa
-          vote: Väjare
+          vote: Vote
         project:
           add: Lägg till
           count:
@@ -83,8 +83,8 @@ sv:
           global:
             geocoding_enabled: Geokodning aktiverad
             total_projects: Projekt totalt
-            vote_per_budget: maximal budgetsumma aktiverad (standardinställning)
-            vote_per_project: maximalt antal projekt aktiverat
+            vote_per_budget: Maximum budget sum enabled (default)
+            vote_per_project: Maximum project count enabled
     events:
       budgets:
         order_checkout:
