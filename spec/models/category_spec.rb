@@ -43,6 +43,7 @@ module Decidim
       let!(:category) { create(:category, color: color) }
 
       it { is_expected.to be_valid }
+
       it "return the category color" do
         expect(category.color).to eq(color)
       end

@@ -16,11 +16,22 @@ module Decidim
       include Decidim::Comments::Commentable
       include Decidim::Traceable
       include Decidim::Loggable
+      include Decidim::Randomable
+      include Decidim::Searchable
+
       component_manifest_name "budgets"
       has_many :line_items, class_name: "Decidim::Budgets::LineItem", foreign_key: "decidim_project_id", dependent: :destroy
       has_many :orders, through: :line_items, foreign_key: "decidim_project_id", class_name: "Decidim::Budgets::Order"
 
       geocoded_by :address, http_headers: ->(project) { { "Referer" => project.component.organization.host } }
+
+      searchable_fields(
+        scope_id: :decidim_scope_id,
+        participatory_space: { component: :participatory_space },
+        A: :title,
+        D: :description,
+        datetime: :created_at
+      )
 
       def self.log_presenter_class_for(_log)
         Decidim::Budgets::AdminLog::ProjectPresenter
@@ -43,16 +54,7 @@ module Decidim
 
       # Public: Overrides the `users_to_notify_on_comment_created` Commentable concern method.
       def users_to_notify_on_comment_created
-        participatory_process = component.participatory_space
-        admins = component.organization.admins
-        users_with_role = component.organization.users_with_any_role
-        process_users_with_role = get_user_with_process_role(participatory_process.id)
-        users = admins + users_with_role + process_users_with_role
-        users.uniq
-      end
-
-      def get_user_with_process_role(participatory_process_id)
-        Decidim::ParticipatoryProcessUserRole.where(decidim_participatory_process_id: participatory_process_id).map(&:user)
+        followers
       end
 
       # Public: Returns the number of times an specific project have been checked out.
