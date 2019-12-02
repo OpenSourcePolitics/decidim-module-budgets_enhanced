@@ -70,7 +70,7 @@ fr:
             one: projet
             other: projets
           view: Voir
-          vote: Vote
+          vote: Voter
         project:
           add: Ajouter
           count:
