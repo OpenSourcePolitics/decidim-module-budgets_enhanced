@@ -70,7 +70,7 @@ fi:
             one: suunnitelma
             other: suunnitelmaa
           view: Näytä
-          vote: Äänestäjä
+          vote: Voter
         project:
           add: Lisää
           count:
