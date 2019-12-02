@@ -70,7 +70,7 @@ fi:
             one: suunnitelma
             other: suunnitelmaa
           view: Näytä
-          vote: Äänestäjä
+          vote: Vote
         project:
           add: Lisää
           count:
@@ -83,8 +83,8 @@ fi:
           global:
             geocoding_enabled: Sijaintitieto käytössä
             total_projects: Äänimäärä per henkilö
-            vote_per_budget: määrärahan käyttöön perustuva äänestystapa (oletus)
-            vote_per_project: suunnitelmien lukumäärään perustuva äänestystapa
+            vote_per_budget: Maximum budget sum enabled (default)
+            vote_per_project: Maximum project count enabled
     events:
       budgets:
         order_checkout:
