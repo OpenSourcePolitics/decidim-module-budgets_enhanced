@@ -70,7 +70,7 @@ fr:
             one: projet
             other: projets
           view: Voir
-          vote: Confirmez votre choix
+          vote: Voter
         project:
           add: Ajouter
           count:
@@ -83,8 +83,8 @@ fr:
           global:
             geocoding_enabled: Activer la "Géolocalisation"
             total_projects: Budget par nombre de projets total
-            vote_per_budget: maximum budjet sum enabled (default)
-            vote_per_project: maximum project count enabled
+            vote_per_budget: Maximum budget sum enabled (default)
+            vote_per_project: Maximum project count enabled
     events:
       budgets:
         order_checkout:

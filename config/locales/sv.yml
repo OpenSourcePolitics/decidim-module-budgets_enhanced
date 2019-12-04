@@ -83,8 +83,8 @@ sv:
           global:
             geocoding_enabled: Geokodning aktiverad
             total_projects: Projekt totalt
-            vote_per_budget: maximal budgetsumma aktiverad (standardinställning)
-            vote_per_project: maximalt antal projekt aktiverat
+            vote_per_budget: Maximal budgetsumma aktiverad (standardinställning)
+            vote_per_project: Maximalt antal projekt aktiverat
     events:
       budgets:
         order_checkout:

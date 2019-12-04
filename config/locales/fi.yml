@@ -83,8 +83,8 @@ fi:
           global:
             geocoding_enabled: Sijaintitieto käytössä
             total_projects: Äänimäärä per henkilö
-            vote_per_budget: määrärahan käyttöön perustuva äänestystapa (oletus)
-            vote_per_project: suunnitelmien lukumäärään perustuva äänestystapa
+            vote_per_budget: Määrärahan käyttöön perustuva äänestystapa (oletus)
+            vote_per_project: Suunnitelmien lukumäärään perustuva äänestystapa
     events:
       budgets:
         order_checkout:
