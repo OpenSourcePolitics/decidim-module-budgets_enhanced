@@ -4,6 +4,9 @@ $(() => {
         progressRef = document.querySelector("[data-progress-reference]"),
         progressVisibleClass = "is-progressbox-visible";
 
+    if (!progressFix) {
+      return;
+    }
     if (!progressRef) {
       return;
     }
