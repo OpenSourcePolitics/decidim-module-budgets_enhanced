@@ -33,6 +33,10 @@ module Decidim
         datetime: :created_at
       )
 
+      def self.ordered_ids(ids)
+        order(Arel.sql("position(id::text in '#{ids.join(",")}')"))
+      end
+
       def self.log_presenter_class_for(_log)
         Decidim::Budgets::AdminLog::ProjectPresenter
       end
